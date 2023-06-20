@@ -33,14 +33,21 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+
+
                 String name = textName.getText().toString();
                 String lastName = textLastName.getText().toString();
                 String email = textMail.getText().toString();
                 String pass = textPass.getText().toString();
 
+                if(name.isEmpty() || lastName.isEmpty() || email.isEmpty() || pass.isEmpty() || !email.contains("@") ){
+                    Toast.makeText(getBaseContext(), "Faltan campos por completar", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 String texto = "Usuario" + name +" "+lastName + " Email: "+email+" Contraseña: "+ pass;
 
-                Toast.makeText(getBaseContext(), texto, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getBaseContext(), texto, Toast.LENGTH_LONG).show();
+
 
             }
         });
