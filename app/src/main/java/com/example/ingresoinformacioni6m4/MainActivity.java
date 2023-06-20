@@ -47,12 +47,8 @@ public class MainActivity extends AppCompatActivity {
                 String texto = "Usuario" + name +" "+lastName + " Email: "+email+" Contraseña: "+ pass;
 
                 Toast.makeText(getBaseContext(), texto, Toast.LENGTH_LONG).show();
-
-
             }
         });
-
-
 
     }
 }
